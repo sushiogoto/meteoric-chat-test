@@ -4,7 +4,8 @@ Meteor.startup(function () {
     Comments.insert({
       title: Fake.sentence(),
       body: Fake.paragraph(),
-      published: Fake.fromArray([true, false])
+      published: Fake.fromArray([true, false]),
+      user: 'tester'
     });
   }
 
