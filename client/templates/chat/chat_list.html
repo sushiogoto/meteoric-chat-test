@@ -1,0 +1,30 @@
+<template name="chatList">
+  {{#contentFor "headerButtonLeft"}}
+    <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+      {{#if isAndroid}}
+        {{> ionIcon icon='android-more-vertical'}}
+      {{else}}
+        {{> ionIcon icon='navicon'}}
+      {{/if}}
+    </button>
+  {{/contentFor}}
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear pull-right" data-ion-modal="_chatPost">
+        {{> ionIcon icon='plus'}}
+    </button>
+  {{/contentFor}}
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Chat List</h1>
+  {{/contentFor}}
+
+  {{#ionContent}}
+    {{#ionList class='list'}}
+      {{#each item}}
+        {{#ionItem href='https://google.com' buttonRight=true avatar=true}}
+        <h1>{{user}}</h1>
+        <h2>{{title}}</h2>
+        {{/ionItem}}
+      {{/each}}
+    {{/ionList}}
+  {{/ionContent}}
+</template>

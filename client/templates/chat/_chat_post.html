@@ -1,0 +1,15 @@
+<template name="_chatPost">
+  {{#ionModal}}
+    {{# autoForm collection="Comments" id="chat-post" type="insert"}}
+      <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear">Cancel</button>
+        <h2 class="title">New Comment</h2>
+        <button type="submit" class="button button-positive button-clear" data-dismiss="modal">Post</button>
+      </div>
+      <div class="content has-header overflow-scroll">
+        {{> afQuickField name="title"}}
+        {{> afQuickField name="user"}}
+      </div>
+    {{/autoForm}}
+  {{/ionModal}}
+</template>

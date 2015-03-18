@@ -1,0 +1,27 @@
+<template name="sideMenu">
+
+  {{#contentFor "headerButtonLeft"}}
+    <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+      {{#if isAndroid}}
+        {{> ionIcon icon='android-more-vertical'}}
+      {{else}}
+        {{> ionIcon icon='navicon'}}
+      {{/if}}
+    </button>
+  {{/contentFor}}
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Side Menu</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      <div class="padding">
+        <a href="{{pathFor 'chatList'}}" class="button button-large button-stable" data-nav-direction="back">
+          {{> ionIcon icon='ios-arrow-back'}}
+          Back to Demo
+        </a>
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>
